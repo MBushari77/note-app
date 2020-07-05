@@ -102,3 +102,73 @@ ul{
 .form_button_container button:hover{
 	background-color: #0f7ea8;
 }
+
+/*#####################################*/
+/* all notes */
+.notes_container{
+	width: 50%;
+	min-width: 500px;
+	padding-top: 10px;
+}
+.note_card{
+	border: solid lightgray 2px;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+.note_card_header{
+	border-bottom:  solid lightgray 1px;
+}
+
+.note_card_body{
+	padding: 15px;
+	text-align: justify;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-bottom: solid lightgray 1px;
+}
+.note_card_body p{
+	margin: 0px;
+}
+.note_card_actions{
+	padding-top: 15px;
+}
+
+.note_card_actions button{
+	width: 50%;
+	border: none;
+	border-radius: 5px;
+	background-color: #3096bd;
+	height: 35px;
+	color: whitesmoke;
+}
+.note_text{
+	cursor: pointer;
+}
+
+.note_container{
+	width: 60%;
+	min-width: 800px;
+}
+
+/* add new note */
+.new_note_container{
+	width: 55%;
+	min-width: 500px;
+}
+.field_container textarea{
+	max-width: 100%;
+	width: 100%;
+	max-height: 250px;
+	min-height: 250px;
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	padding: 20px;
+	padding-top: 0px;
+}
+.ncb2{
+	border: none;
+}
+.nca2{
+	text-align: center;
+}

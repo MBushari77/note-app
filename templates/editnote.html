@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Note</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/fontello.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+	<nav class="nav navbar navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<i class="icon-feather"></i>
+			<!-- <img src="../../assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+			Note
+		</a>
+	</nav>
+	<center>
+		<div class="new_note_container">
+			<div class="note_card_header ncb2">
+				<h3>Add new note</h3>
+			</div>
+			<div class="note_card_body ncb2">
+				<form>
+					<div class="field_container">
+						<i class="icon-user-1"></i>
+						<input type="text" placeholder="Note title" name="username">
+					</div>
+					<div class="field_container">
+						<div>
+							<i class="icon-user-1"></i>
+						</div>
+						<textarea placeholder="Note content" name="content"></textarea>
+					</div>
+					<div class="note_card_actions nca2 row">
+						<div class="col-6">
+							<button><i class="icon-pencil-2"></i>Edit</button>
+						</div>
+						<div class="col-6">
+							<button><i class="icon-cancel-2"></i>Delete</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</center>
 
+	
+	<!-- JS files -->
+	<script type="text/javascript" src="/static/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/script.js"></script>
+</body>
+</html>

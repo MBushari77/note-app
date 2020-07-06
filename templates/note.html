@@ -20,28 +20,27 @@
 	</nav>
 	<center>
 		<div class="note_container">
+			{% if note %}
 			<div class="note_card">
 				<div class="note_card_header">
-					<h3>note title</h3>
-					<p>2020-23-4 11:34</p>
+					<h3>{{ note[0].title }}</h3>
+					<p>{{ note[0].date }}</p>
 				</div>
 				<div class="note_card_body">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>{{ note[0].content }}</p>
 				</div>
 				<div class="note_card_actions row">
 					<div class="col-6">
-						<button><i class="icon-pencil-2"></i>Edit</button>
+						<button onclick="location.href='/edit/{{ note[0].id }}'"><i class="icon-pencil-2"></i>Edit</button>
 					</div>
 					<div class="col-6">
-						<button><i class="icon-cancel-2"></i>Delete</button>
+						<button onclick="delNote({{note[0].id}})"><i class="icon-cancel-2"></i>Delete</button>
 					</div>
 				</div>
 			</div>
+			{% else %}
+			<h2>note not found</h2>
+			{% endif %}
 		</div>
 	</center>
 

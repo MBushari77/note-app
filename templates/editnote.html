@@ -21,30 +21,31 @@
 	<center>
 		<div class="new_note_container">
 			<div class="note_card_header ncb2">
-				<h3>Add new note</h3>
+				<h3>Edit note</h3>
 			</div>
 			<div class="note_card_body ncb2">
-				<form>
+				<form action="/editnote/{{ note[0].id }}" method="post">
 					<div class="field_container">
-						<i class="icon-user-1"></i>
-						<input type="text" placeholder="Note title" name="username">
+						<i class="icon-quote-right"></i>
+						<input type="text" placeholder="Note title" name="title" value="{{ note[0].title }}">
 					</div>
 					<div class="field_container">
 						<div>
-							<i class="icon-user-1"></i>
+							<i class="icon-pencil-2"></i>
 						</div>
-						<textarea placeholder="Note content" name="content"></textarea>
+						<textarea placeholder="Note content" name="content">{{ note[0].content }}</textarea>
 					</div>
 					<div class="note_card_actions nca2 row">
 						<div class="col-6">
-							<button><i class="icon-pencil-2"></i>Edit</button>
+							<button type="button" onclick="location.href='/notes'"><i class="icon-cancel-2"></i>Cancil</button>
 						</div>
 						<div class="col-6">
-							<button><i class="icon-cancel-2"></i>Delete</button>
+							<button><i class="icon-floppy"></i>Save</button>
 						</div>
 					</div>
 				</form>
 			</div>
+		
 		</div>
 	</center>
 

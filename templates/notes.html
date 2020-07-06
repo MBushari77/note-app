@@ -20,64 +20,31 @@
 	</nav>
 	<center>
 		<div class="notes_container">
+			{% if notes %}
+			{% for note in notes %}
 			<div class="note_card">
 				<div class="note_card_header">
-					<h3>Title of the note</h3>
+					<h3>{{ note.title }}</h3>
+					<p>{{ note.date }}</i></p>
 				</div>
 				<div class="note_card_body">
-					<p class="note_text" id="noteId">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+					<p class="note_text shortNote" id="noteId" onclick="location.href='/note/{{ note.id }}'">
+						{{ note.content }}
+					</p>
 				</div>
 				<div class="note_card_actions row">
 					<div class="col-6">
-						<button><i class="icon-pencil-2"></i>Edit</button>
+						<button onclick="location.href='/edit/{{ note.id }}'"><i class="icon-pencil-2"></i>Edit</button>
 					</div>
 					<div class="col-6">
-						<button><i class="icon-cancel-2"></i>Delete</button>
+						<button onclick="delNote({{note.id}})"><i class="icon-cancel-2"></i>Delete</button>
 					</div>
 				</div>
 			</div>
-
-
-			<div class="note_card">
-				<div class="note_card_header">
-					<h3>Title of the note</h3>
-				</div>
-				<div class="note_card_body">
-					<p class="note_text" id="noteId">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-				</div>
-				<div class="note_card_actions row">
-					<div class="col-6">
-						<button><i class="icon-pencil-2"></i>Edit</button>
-					</div>
-					<div class="col-6">
-						<button><i class="icon-cancel-2"></i>Delete</button>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="note_card">
-				<div class="note_card_header">
-					<h3>Title of the note</h3><p>2020-13-03 09:23</p>
-				</div>
-				<div class="note_card_body">
-					<p class="note_text" id="noteId">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-				</div>
-				<div class="note_card_actions row">
-					<div class="col-6">
-						<button><i class="icon-pencil-2"></i>Edit</button>
-					</div>
-					<div class="col-6">
-						<button><i class="icon-cancel-2"></i>Delete</button>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
+			{% else %}
+			<h2>No note</h2>
+			{% endif %}
 		</div>
 	</center>
 

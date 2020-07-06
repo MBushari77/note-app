@@ -24,10 +24,10 @@
 				<h3>Add new note</h3>
 			</div>
 			<div class="note_card_body ncb2">
-				<form>
+				<form action="/savenote" method="post">
 					<div class="field_container">
 						<i class="icon-quote-right"></i>
-						<input type="text" placeholder="Note title" name="username">
+						<input type="text" placeholder="Note title" name="title">
 					</div>
 					<div class="field_container">
 						<div>
@@ -37,7 +37,7 @@
 					</div>
 					<div class="note_card_actions nca2 row">
 						<div class="col-6">
-							<button><i class="icon-cancel-2"></i>Cancil</button>
+							<button type="button" onclick="location.href='/notes'"><i class="icon-cancel-2"></i>Cancil</button>
 						</div>
 						<div class="col-6">
 							<button><i class="icon-floppy"></i>Save</button>

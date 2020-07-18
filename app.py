@@ -76,7 +76,7 @@ def registering():
 	return redirect(url_for('allusers'))
 
 
-# show all notes
+# show all note's
 @app.route('/notes')
 def notes():
 	try:
